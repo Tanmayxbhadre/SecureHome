@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Download SecureHome for Android | Private Household OTP Relay</title>
+  <meta name="description" content="Download the SecureHome Android APK. End-to-end encrypted private line to move OTPs and verification codes from your phone to your laptop and family devices.">
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="download.css">
+  <script src="vendor/qrcode.js" defer></script>
+  <script src="download.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav-header">
+    <div class="container nav-content">
+      <a href="download.html" class="brand">
+        <img src="mark.svg" alt="SecureHome Logo" width="32" height="32">
+        <span>SecureHome</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#install" class="nav-link">How to Install</a>
+        <a href="index.html" class="nav-link">Web Viewer</a>
+        <a href="securehome.apk" download="securehome.apk" class="btn-header">Download APK</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-badge">
+        <span>🔒</span>
+        <span>End-to-End Encrypted Household OTP Relay</span>
+      </div>
+      <h1>A Private Line for Your Home.</h1>
+      <p class="hero-subtitle">
+        Automatically moves one-time codes, delivery PINs, and ride verifications from your Android phone's SMS to your laptop or other household devices. No cloud accounts, zero tracking.
+      </p>
+
+      <!-- Download Card -->
+      <div class="download-card">
+        <div class="download-info">
+          <h3>SecureHome for Android</h3>
+          <p>Official release package direct from source. Signed, lightweight, and battery-efficient.</p>
+          
+          <a href="securehome.apk" download="securehome.apk" class="btn-download-primary" id="btn-download-apk">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download APK (v1.0.0)
+          </a>
+
+          <div class="meta-tags">
+            <span class="tag">com.tanmay.securehome</span>
+            <span class="tag">Android 12+ (API 31-36)</span>
+            <span class="tag">Arm64 / x86_64</span>
+          </div>
+        </div>
+
+        <div class="qr-box">
+          <div class="qr-header">
+            <label for="qr-mode-select" class="qr-label">Scan action:</label>
+            <select id="qr-mode-select" class="qr-select">
+              <option value="apk" selected>Direct APK Download</option>
+              <option value="page">Open Website on Mobile</option>
+            </select>
+          </div>
+          <div class="qr-preview" id="apk-qr" aria-label="Scan to open on phone">
+            <!-- Dynamic QR code rendered here -->
+          </div>
+          <code class="qr-url-text" id="qr-target-url">http://10.225.210.183:8787/securehome.apk</code>
+          <div class="lan-helper">
+            <span class="lan-label">Laptop IP:</span>
+            <input type="text" id="ip-override" value="10.225.210.183" class="ip-input" placeholder="IP address">
+            <button type="button" id="btn-update-qr" class="btn-sm">Apply</button>
+          </div>
+          <span class="qr-caption">Make sure your phone is on the same Wi-Fi network.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="section container" id="features">
+      <div class="section-title">
+        <h2>Built with Privacy & Security First</h2>
+        <p>Your bank codes belong to you, not a third-party server.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>End-to-End Encrypted</h3>
+          <p>Every message is encrypted on your phone using ECDH P-256 and AES-256-GCM. The relay in the middle cannot decrypt anything it carries.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⏳</div>
+          <h3>Zero Persistent Storage</h3>
+          <p>Messages stay in relay memory for at most 15 minutes before being permanently purged. There is no central database or user accounts.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Smart Auto-Detection</h3>
+          <p>Detects 4-8 digit OTPs, delivery PINs (Swiggy, Zomato, Amazon), and ride codes (Uber, Ola). Personal and conversational texts never leave the phone.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💻</div>
+          <h3>Zero-Install Laptop Receiver</h3>
+          <p>Your work PC or laptop needs nothing installed. Open the Web Viewer tab, pair in 3 seconds by QR code, and receive codes live via WebSockets.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Two Phones, Both Ways</h3>
+          <p>Keep one phone at home and carry another. Both phones can share codes with each other automatically or manually share any code from the last 2 days.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Self-Hosted Control</h3>
+          <p>Deploy your own relay on a free Cloudflare Worker. You own the private line, the domain, and the cryptographic founding secret.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Steps -->
+    <section class="section container" id="install">
+      <div class="section-title">
+        <h2>How to Install on Android</h2>
+        <p>Simple 3-step setup to get SecureHome running in 60 seconds.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Download & Install APK</h3>
+          <p>Tap <strong>Download APK</strong> above or scan the QR code. When Android asks, select <em>Settings → Allow from this source</em> to complete the installation.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Allow SMS Permission</h3>
+          <p>Open SecureHome and tap <em>Allow SMS access</em>. The app reads incoming messages locally to spot OTPs. No messages are ever uploaded unencrypted.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Pair with Laptop or Phone</h3>
+          <p>Open the <a href="index.html" class="nav-link"><strong>Web Viewer</strong></a> on your laptop. On your phone, tap <em>Devices → Pair a device</em> and scan the screen. Done!</p>
+        </div>
+      </div>
+
+      <!-- ADB Commands for Developers -->
+      <div class="terminal-box">
+        <div>
+          <span class="muted"># Install via USB with ADB:</span><br>
+          <code>adb install -r securehome.apk</code>
+        </div>
+        <button type="button" class="btn-copy-cli" id="btn-copy-adb">Copy</button>
+      </div>
+      <div class="terminal-box">
+        <div>
+          <span class="muted"># Forward laptop port to phone over USB (allows http://localhost:8787 directly on phone):</span><br>
+          <code>adb reverse tcp:8787 tcp:8787</code>
+        </div>
+        <button type="button" class="btn-copy-cli" id="btn-copy-reverse">Copy</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>SecureHome &copy; 2026 Tanmay Bhadre. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Web Viewer</a>
+        <a href="download.html">Download</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

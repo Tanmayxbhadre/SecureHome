@@ -1,0 +1,28 @@
+{
+  "name": "securehome-relay",
+  "version": "1.0.0",
+  "description": "SecureHome relay: a Cloudflare Worker that carries end-to-end encrypted one-time codes between a household's devices.",
+  "scripts": {
+    "dev": "wrangler dev --ip 0.0.0.0",
+    "dev:tunnel": "wrangler dev --tunnel",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types",
+    "typecheck": "tsc",
+    "test": "node --test scripts/*.test.mjs",
+    "e2e": "node scripts/e2e.mjs",
+    "phone": "node scripts/phone.mjs",
+    "laptop": "node scripts/laptop.mjs",
+    "vectors": "node scripts/vectors.mjs"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "qrcode-generator": "^2.0.4",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.166.0"
+  },
+  "private": true,
+  "author": "Tanmay Bhadre <tanmaybhadre6@gmail.com>"
+}

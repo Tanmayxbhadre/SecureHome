@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "securehome",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "HOUSEHOLD", "class_name": "Household" },
+      { "name": "PAIRING", "class_name": "Pairing" }
+    ]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Household", "Pairing"] }],
+  "vars": {
+    // How long the relay keeps a shared item, in milliseconds (15 minutes).
+    "ITEM_TTL_MS": "900000"
+  },
+  // Per-IP limits on the routes that need no device token (keyed by CF-Connecting-IP).
+  "ratelimits": [
+    { "name": "FOUNDING_LIMIT", "namespace_id": "1001", "simple": { "limit": 10, "period": 60 } },
+    { "name": "PAIRING_LIMIT", "namespace_id": "1002", "simple": { "limit": 100, "period": 10 } }
+  ],
+  "observability": { "enabled": true }
+}

@@ -1,0 +1,14 @@
+# Security headers for the laptop page and download site (Cloudflare Workers static assets apply this file).
+# The page shows one-time codes: no third-party code, no framing, no referrers, nothing inline.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+
+/*.apk
+  Content-Type: application/vnd.android.package-archive
+  Content-Disposition: attachment; filename="securehome.apk"

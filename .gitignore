@@ -1,0 +1,18 @@
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# Secrets and per-machine settings (also covered in each subproject)
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+local.properties
+keystore.properties
+*.jks
+*.keystore
+.phone*.json

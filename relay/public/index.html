@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>SecureHome</title>
+  <meta name="description" content="SecureHome: a private, encrypted line for your home.">
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/qrcode.js" defer></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="bar">
+    <div class="brand"><img class="mark" src="mark.svg" alt="" width="28" height="28"> SecureHome <span class="tagline">A private line for your home</span></div>
+    <div class="bar-right">
+      <a class="ghost" href="download.html">Download APK</a>
+      <div id="bar-live" hidden>
+        <span class="status" id="status"><span class="dot"></span><span id="status-text">Connecting…</span></span>
+        <button class="ghost" id="btn-notify" type="button">Notify me</button>
+        <button class="ghost" id="btn-unpair" type="button">Unpair</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="view-loading" class="center">
+      <p class="muted">Loading…</p>
+    </section>
+
+    <section id="view-pair" class="center" hidden>
+      <div class="panel">
+        <h1>Pair this browser</h1>
+        <p class="notice" id="pair-notice" hidden></p>
+        <ol class="steps">
+          <li>Open SecureHome on your phone. <span class="muted small">(Need the app? <a href="download.html">Download APK</a>)</span></li>
+          <li>Go to <strong>Devices → Pair a device</strong> and scan this code.</li>
+          <li>Check that both screens show the same 6-digit code, then confirm on the phone.</li>
+        </ol>
+        <div class="qr" id="qr" role="img" aria-label="Pairing QR code"></div>
+        <p class="muted small" id="pair-expiry"></p>
+        <details class="manual">
+          <summary>Can't scan? Show the pairing text</summary>
+          <code id="pair-text"></code>
+          <button class="ghost small" id="btn-copy-pair" type="button">Copy</button>
+        </details>
+        <p class="muted small" id="storage-warning" hidden>This browser can't store data for this page, so you'll need to pair again after closing the tab.</p>
+      </div>
+    </section>
+
+    <section id="view-confirm" class="center" hidden>
+      <div class="panel">
+        <h1>Confirm on your phone</h1>
+        <p>Your phone should show this code:</p>
+        <p class="sas" id="sas"></p>
+        <p class="muted">If it matches, tap <strong>Confirm</strong> on the phone. If it doesn't, cancel on the phone and start again.</p>
+        <p class="muted small" id="confirm-wait">Waiting for your phone…</p>
+        <button class="ghost" id="btn-cancel" type="button">Start over</button>
+      </div>
+    </section>
+
+    <section id="view-live" hidden>
+      <p class="whoami muted small" id="whoami"></p>
+      <ul class="items" id="items" aria-live="polite"></ul>
+      <div class="empty" id="empty">
+        <p><strong>No OTPs right now.</strong></p>
+        <p class="muted">New ones appear here the moment they're shared, and disappear after <span id="ttl-label">15 minutes</span>.</p>
+      </div>
+    </section>
+  </main>
+
+  <template id="tpl-item">
+    <li class="item">
+      <div class="item-top">
+        <span class="badge"></span>
+        <span class="sender"></span>
+        <span class="age muted"></span>
+      </div>
+      <div class="item-code">
+        <button class="code" type="button" title="Copy code"></button>
+        <button class="copy" type="button">Copy</button>
+      </div>
+      <div class="item-meta muted small">
+        <span class="from"></span>
+        <span class="expires"></span>
+      </div>
+      <div class="bar-track"><div class="bar-fill"></div></div>
+      <details class="sms">
+        <summary class="small">Message</summary>
+        <p class="sms-body small"></p>
+      </details>
+    </li>
+  </template>
+</body>
+</html>

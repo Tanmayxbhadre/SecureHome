@@ -1,0 +1,18 @@
+[
+  { "from": "AX-HDFCBK-S", "body": "123456 is your OTP for login to HDFC Bank NetBanking. OTP valid for 5 mins. Do not share it with anyone.", "expect": { "code": "123456", "kind": "otp", "sender": "HDFCBK" } },
+  { "from": "VM-HDFCBK", "body": "OTP for txn of Rs 2,499.00 at AMAZON on HDFC Bank card ending 4321 is 845210. Valid till 10:42. Do not share OTP for security reasons.", "expect": { "code": "845210", "kind": "otp", "sender": "HDFCBK" } },
+  { "from": "JD-ICICIT", "body": "Dear Customer, 482913 is the OTP for your ICICI Bank Credit Card XX9876 transaction of INR 1250.00 at FLIPKART. Do not share.", "expect": { "code": "482913", "kind": "otp", "sender": "ICICIT" } },
+  { "from": "VM-SWIGGY", "body": "Your Swiggy order is out for delivery. Share OTP 4821 with the delivery partner to receive your order.", "expect": { "code": "4821", "kind": "delivery", "sender": "SWIGGY" } },
+  { "from": "AX-AMAZON", "body": "Your Amazon package with 2 items will be delivered today. Share OTP 739104 with the delivery agent only after checking the package.", "expect": { "code": "739104", "kind": "delivery", "sender": "AMAZON" } },
+  { "from": "AD-AMAZON", "body": "123987 is your Amazon OTP. Do not share it with anyone.", "expect": { "code": "123987", "kind": "otp", "sender": "AMAZON" } },
+  { "from": "VK-UBERIN", "body": "Your Uber ride PIN is 5832. Share it with your driver to start the trip.", "expect": { "code": "5832", "kind": "ride", "sender": "UBERIN" } },
+  { "from": "AX-OLACAB", "body": "Your OTP for the Ola ride is 3917. Driver Ramesh, KA01AB1234 is arriving.", "expect": { "code": "3917", "kind": "ride", "sender": "OLACAB" } },
+  { "from": "BZ-RAPIDO", "body": "4729 is your Rapido ride OTP. Share with captain to start the ride.", "expect": { "code": "4729", "kind": "ride", "sender": "RAPIDO" } },
+  { "from": "VM-ZOMATO", "body": "Your Zomato order is on the way. OTP for delivery: 6174. Please share it with your delivery partner.", "expect": { "code": "6174", "kind": "delivery", "sender": "ZOMATO" } },
+  { "from": "GOOGLE", "body": "G-482913 is your Google verification code.", "expect": { "code": "482913", "kind": "otp", "sender": "GOOGLE" } },
+  { "from": "AX-UIDAI", "body": "OTP for Aadhaar (XX5678) is 912345 (valid for 10 mins). - UIDAI", "expect": { "code": "912345", "kind": "otp", "sender": "UIDAI" } },
+  { "from": "VM-HDFCBK", "body": "Rs.4500.00 debited from A/c XX1234 on 22-11-26 to VPA abc@okhdfc. UPI Ref 632145987452. Not you? Call 18002586161. Never share your OTP.", "expect": null },
+  { "from": "VM-SWIGGY", "body": "Flat 50% off on your next order! Use code FEAST50. T&C apply.", "expect": null },
+  { "from": "AX-FLPKRT", "body": "Your order will be delivered to PIN code 560001 tomorrow.", "expect": null },
+  { "from": "+919812345678", "body": "Reached home, will call at 9", "expect": null }
+]

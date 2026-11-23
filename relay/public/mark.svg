@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="sh-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#sh-grad)"/>
+  <!-- Home Roof & Outer Body -->
+  <path d="M16 6.5 L6.5 14.2 H9.5 V25 H22.5 V14.2 H25.5 Z" fill="#FFFFFF"/>
+  <!-- Security Shield Cutout -->
+  <path d="M16 13.5 C17.8 13.5 19.5 14.2 19.5 14.2 V18.2 C19.5 20.8 16 22.3 16 22.3 C16 22.3 12.5 20.8 12.5 18.2 V14.2 C12.5 14.2 14.2 13.5 16 13.5 Z" fill="#1D4ED8"/>
+  <!-- Inner Security Check / Keyhole Indicator in Shield -->
+  <circle cx="16" cy="16.8" r="1.1" fill="#FFFFFF"/>
+  <path d="M16 17.5 V19.5" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round"/>
+</svg>

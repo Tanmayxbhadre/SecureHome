@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Home shape -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,23 L23,49 H32 V85 H76 V49 H85 Z" />
+    <!-- Shield Cutout -->
+    <path
+        android:fillColor="@color/brand_primary"
+        android:pathData="M54,46 C60.5,46 66.5,48.5 66.5,48.5 V62.5 C66.5,71.5 54,76.5 54,76.5 C54,76.5 41.5,71.5 41.5,62.5 V48.5 C41.5,48.5 47.5,46 54,46 Z" />
+    <!-- Keyhole / Pin in Shield -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,58m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" />
+    <path
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,60 L54,67" />
+</vector>
