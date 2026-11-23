@@ -7,7 +7,7 @@
 <p align="center"><strong>A private, encrypted line for your home.</strong></p>
 
 <p align="center">
-  <img src="docs/images/securehome-hero.webp" alt="SecureHome sharing fictional bank, delivery, and ride codes from an Android phone to a laptop" width="1200">
+  <img src="" alt="SecureHome sharing fictional bank, delivery, and ride codes from an Android phone to a laptop" width="1200">
 </p>
 
 SecureHome moves one-time codes from your Android phone's SMS to the devices you choose: a browser tab on your work
